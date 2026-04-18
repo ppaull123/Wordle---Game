@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordle - Highscores</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <div class="header">
+        <a href="/" class="logo">WORDLE</a>
+        <nav>
+            <a href="/">Play</a>
+            <a href="/highscore">Highscore</a>
+            <a href="/about">About</a>
+        </nav>
+    </div>
+
+    <main class="page">
+        <h1>HIGHSCORES</h1>
+
+        <section class="highscore--filter">
+            <div class="highscore--filterGroup">
+                <p>Filter by word length</p>
+                <div class="highscore--filterBtns">
+                    <button class="wordBtn active" data-filter="all">All</button>
+                    <button class="wordBtn" data-filter="3">3</button>
+                    <button class="wordBtn" data-filter="4">4</button>
+                    <button class="wordBtn" data-filter="5">5</button>
+                    <button class="wordBtn" data-filter="6">6</button>
+                    <button class="wordBtn" data-filter="7">7</button>
+                </div>
+            </div>
+
+            <div class="highscore--filterGroup">
+                <p>Filter by unique letters</p>
+                <div class="highscore--filterBtns">
+                    <button class="uniqueBtn active" data-filter="all">All</button>
+                    <button class="uniqueBtn" data-filter="true">Yes</button>
+                    <button class="uniqueBtn" data-filter="false">No</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="highscore--card">
+            <div class="highscore--row highscore--head">
+                <p>Name</p>
+                <p>Time</p>
+                <p>Guesses</p>
+                <p>Unique Letters</p>
+                <p>Word Length</p>
+            </div>
+
+            {{#each highscores}}
+            <div class="highscore--row highscore--score" 
+                data-wordlength="{{this.wordLength}}"
+                data-unique="{{this.uniqueLetters}}">
+                <p>{{this.name}}</p>
+                <p>{{this.formattedTime}}</p>
+                <p>{{this.guesses}}</p>
+                <p>{{#if this.uniqueLetters}}Yes{{else}}No{{/if}}</p>
+                <p>{{this.wordLength}}</p>
+            </div>
+            {{/each}}
+        </section>
+    </main>
+
+    <script src="/highscore.js"></script>
+</body>
+
+</html>

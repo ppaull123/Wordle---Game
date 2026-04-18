@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Wordle - About</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="header">
+    <a href="/" class="logo">WORDLE</a>
+    <nav>
+      <a href="/">Play</a>
+      <a href="/highscore">Highscore</a>
+      <a href="/about">About</a>
+    </nav>
+  </div>
+
+  <h1>ABOUT WORDLE</h1>
+
+  <div class="about--paragraph">
+    <h2 class="about--header">About the Game</h2>
+    <p>
+      This is a wordle-inspired word guessing game built as a fullstack web application.
+      The game lets you choose the word length (3-7 letters) and wether the word
+      should have unique letters, then challenges you to guess the hidden word.
+    </p>
+  </div>
+
+  <div class="about--paragraph">
+    <h2 class="about--header">How to Play</h2>
+    <p>
+      <span>1</span> Choose the number of letters (3-7) and wether you want unique letters.<br>
+      <span>2</span> Type a word and press enter to guess.<br>
+      <span>3</span> Each letter is colored based on feedback:<br>
+      <span class="feedback--green"></span> Green - Correct letter, correct position.<br>
+      <span class="feedback--yellow"></span> Yellow - Correct letter, wrong position.<br>
+      <span class="feedback--red"></span> Red - The letter is not in the word.<br>
+    </p>
+  </div>
+
+  <div class="about--paragraph">
+    <h2 class="about--header">Technical Details</h2>
+    <p>
+      This project is built using React on the frontend
+       and Node.js with Express on the backend. The game logic is handled on the 
+       server, where guesses are checked against the hidden word and feedback is 
+       generated for each letter. Words are loaded from a dictionary file, 
+       and winning scores are stored in MongoDB using Mongoose. 
+       The highscore page is rendered with Handlebars and supports filtering by word 
+       length and unique letters.
+    </p>
+  </div>
+
+</body>
+
+</html>

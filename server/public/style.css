@@ -1,0 +1,152 @@
+body {
+    background-color: #F6F7F9;
+    font-family: monospace;
+    margin: 0;
+    color: black;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    height: 50px;
+    padding: 10px 20px;
+}
+
+.header nav {
+    display: flex;
+    gap: 16px;
+}
+
+.header nav a {
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+}
+
+.logo {
+    font-size: 36px;
+    font-weight: bold;
+    color: black;
+    margin: 0;
+    text-decoration: none;
+}
+
+.page {
+    max-width: 900px;
+    margin: 40px auto 0;
+    padding: 0 20px 40px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.highscore--card {
+    background-color: white;
+    border-radius: 16px;
+    padding: 10px 0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.highscore--row {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr 1.4fr 1fr;
+    align-items: center;
+    justify-items: start;
+    padding: 14px 24px;
+    column-gap: 16px;
+}
+
+.highscore--row p {
+    margin: 0;
+}
+
+.highscore--head {
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 1px solid #E5E7EB;
+}
+
+.highscore--filter {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.highscore--filterGroupBtns {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.highscore--filterBtns button {
+    font-family: monospace;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 1px solid #E5E7EB;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+.active {
+    background-color: #259353;
+    color: white;
+}
+
+.about--paragraph {
+    max-width: 600px;
+    margin: 0 auto 20px;
+    line-height: 1.6;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.about--header {
+    margin-bottom: 0;
+}
+
+.about--paragraph p {
+    margin-top: 0;
+}
+
+.about--paragraph span {
+    font-weight: bold;
+    color: white;
+    background-color: #259353;
+    border-radius: 50%;
+    font-size: 16px;
+    padding: 2px 8px;
+}
+
+.about--paragraph span.feedback--green {
+    display: inline;
+    background-color: #259353;
+    padding: 2px 12px;
+    margin: 0 10px 0 40px;
+}
+
+.about--paragraph span.feedback--yellow {
+    display: inline;
+    background-color: #FFD700;
+    padding: 2px 12px;
+    margin: 0 10px 0 40px;
+}
+
+.about--paragraph span.feedback--red {
+    display: inline;
+    background-color: #EF4444;
+    padding: 2px 12px;
+    margin: 0 10px 0 40px;
+}
